@@ -100,3 +100,23 @@ sk:
       redownload: Obnoviť avatar
       reset: Reset
       reset_password: Obnoviť heslo
+      resubscribe: Znovu odoberať
+      salmon_url: Salmon URL
+      search: Hľadať
+      shared_inbox_url: URL zdieľanej schránky
+      show:
+        created_reports: Reportované týmto používateľom
+        report: report
+        targeted_reports: Nahlásenia pre tento účet
+      silence: Stíšiť
+      statuses: Príspevky
+      subscribe: Odoberať
+      title: Účty
+      undo_silenced: Zrušiť stíšenie
+      undo_suspension: Zrušiť suspendáciu
+      unsubscribe: Prestať odoberať
+      username: Používateľske meno
+      web: Web
+    custom_emojis:
+      created_msg: Emoji úspešne vytvorené!
+      delete: Zmazať
