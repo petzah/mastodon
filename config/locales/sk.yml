@@ -120,3 +120,15 @@ sk:
     custom_emojis:
       created_msg: Emoji úspešne vytvorené!
       delete: Zmazať
+      destroyed_msg: Emojo úspešne zničený!
+      emoji: Emoji
+      image_hint: PNG do 50KB
+      new:
+        title: Pridať vlastný emoji
+      shortcode: Skratka
+      shortcode_hint: Aspoň 2 znaky, povolené sú alfanumerické alebo podčiarkovník
+      title: Vlastné emoji
+      upload: Nahrať
+    domain_blocks:
+      add_new: Pridať nový
+      created_msg: Doména je v procese blokovania
