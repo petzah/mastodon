@@ -1,3 +1,7 @@
+export function EmojiPicker () {
+  return import(/* webpackChunkName: "emoji_picker" */'../../emoji/emoji_picker');
+}
+
 export function Compose () {
   return import(/* webpackChunkName: "features/compose" */'../../compose');
 }

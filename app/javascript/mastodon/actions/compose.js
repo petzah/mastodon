@@ -1,6 +1,6 @@
 import api from '../api';
-import { emojiIndex } from 'emoji-mart';
 import { throttle } from 'lodash';
+import { search as emojiSearch } from '../features/emoji/emoji_mart_search_light';
 
 import {
   updateTimeline,
@@ -16,6 +16,7 @@ export const COMPOSE_SUBMIT_FAIL     = 'COMPOSE_SUBMIT_FAIL';
 export const COMPOSE_REPLY           = 'COMPOSE_REPLY';
 export const COMPOSE_REPLY_CANCEL    = 'COMPOSE_REPLY_CANCEL';
 export const COMPOSE_MENTION         = 'COMPOSE_MENTION';
+export const COMPOSE_RESET           = 'COMPOSE_RESET';
 export const COMPOSE_UPLOAD_REQUEST  = 'COMPOSE_UPLOAD_REQUEST';
 export const COMPOSE_UPLOAD_SUCCESS  = 'COMPOSE_UPLOAD_SUCCESS';
 export const COMPOSE_UPLOAD_FAIL     = 'COMPOSE_UPLOAD_FAIL';
@@ -65,6 +66,12 @@ export function replyCompose(status, router) {
 export function cancelReplyCompose() {
   return {
     type: COMPOSE_REPLY_CANCEL,
+  };
+};
+
+export function resetCompose() {
+  return {
+    type: COMPOSE_RESET,
   };
 };
 
@@ -261,7 +268,7 @@ const fetchComposeSuggestionsAccounts = throttle((dispatch, getState, token) => 
 }, 200, { leading: true, trailing: true });
 
 const fetchComposeSuggestionsEmojis = (dispatch, getState, token) => {
-  const results = emojiIndex.search(token.replace(':', ''), { maxResults: 5 });
+  const results = emojiSearch(token.replace(':', ''), { maxResults: 5 });
   dispatch(readyComposeSuggestionsEmojis(token, results));
 };
 
