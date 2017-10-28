@@ -132,3 +132,20 @@ sk:
     domain_blocks:
       add_new: Pridať nový
       created_msg: Doména je v procese blokovania
+      destroyed_msg: Blokovanie domény bolo zrušené
+      domain: Doména
+      new:
+        create: Blokovať doménu
+        hint: Blokovanie domény stále dovolí vytvárať nové účty v databáze, ale tieto
+          budú automaticky moderované.
+        severity:
+          noop: Nič
+          silence: Stíšiť
+          suspend: Suspendovať
+        title: Nové blokovanie domény
+      reject_media: Odmietať súbory s obrázkami alebo videami
+      severities:
+        noop: Nič
+        silence: Stíšiť
+        suspend: Suspendovať
+      severity: Závažnosť
