@@ -117,7 +117,7 @@
     "navigation_bar.preferences": "Možnosti",
     "navigation_bar.public_timeline": "Federovaná časová os",
     "notification.favourite": "{name} sa páči tvoj status",
-    "notification.follow": "{name} ťa začal sledovať",
+    "notification.follow": "{name} ťa začal(a) sledovať",
     "notification.mention": "{name} ťa zmienil",
     "notification.reblog": "{name} re-tootol tvoj status",
     "notifications.clear": "Vymazať notifikácie",
