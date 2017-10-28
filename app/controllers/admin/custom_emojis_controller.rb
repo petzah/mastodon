@@ -22,20 +22,29 @@ module Admin
       end
     end
 
+    def update
+      if @custom_emoji.update(resource_params)
+        redirect_to admin_custom_emojis_path, notice: I18n.t('admin.custom_emojis.updated_msg')
+      else
+        redirect_to admin_custom_emojis_path, notice: I18n.t('admin.custom_emojis.update_failed_msg')
+      end
+    end
+
     def destroy
       @custom_emoji.destroy
       redirect_to admin_custom_emojis_path, notice: I18n.t('admin.custom_emojis.destroyed_msg')
     end
 
     def copy
-      emoji = @custom_emoji.dup
-      emoji.domain = nil
+      emoji = CustomEmoji.new(domain: nil, shortcode: @custom_emoji.shortcode, image: @custom_emoji.image)
 
       if emoji.save
-        redirect_to admin_custom_emojis_path, notice: I18n.t('admin.custom_emojis.copied_msg')
+        flash[:notice] = I18n.t('admin.custom_emojis.copied_msg')
       else
-        redirect_to admin_custom_emojis_path, alert: I18n.t('admin.custom_emojis.copy_failed_msg')
+        flash[:alert] = I18n.t('admin.custom_emojis.copy_failed_msg')
       end
+
+      redirect_to admin_custom_emojis_path(page: params[:page])
     end
 
     def enable
@@ -55,7 +64,7 @@ module Admin
     end
 
     def resource_params
-      params.require(:custom_emoji).permit(:shortcode, :image)
+      params.require(:custom_emoji).permit(:shortcode, :image, :visible_in_picker)
     end
 
     def filtered_custom_emojis
