@@ -10,7 +10,7 @@ sk:
     contact_missing: Chýba
     contact_unavailable: Neuvedené
     description_headline: Čo je %{domain}?
-    domain_count_after: ďalšie inštancie
+    domain_count_after: ďalším inštanciám
     domain_count_before: Pripojený k
     extended_description_html: '<h3>Pravidlá</h3>
 
@@ -35,7 +35,7 @@ sk:
     generic_description: '%{domain} je jeden server v sieti'
     hosted_on: Mastodon hostovaný na %{domain}
     learn_more: Dozvedieť sa viac
-    other_instances: List inštancií/serverov
+    other_instances: Zoznam ďalších inštancií
     source_code: Zdrojový kód
     status_count_after: príspevkov
     status_count_before: Ktorí napísali
@@ -149,3 +149,6 @@ sk:
         silence: Stíšiť
         suspend: Suspendovať
       severity: Závažnosť
+  settings:
+    back: Naspäť na stránku
+    authorized_apps: Autorizované aplikácie
